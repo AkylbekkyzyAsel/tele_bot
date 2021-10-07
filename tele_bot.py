@@ -1,4 +1,5 @@
 import telebot
+#from telebot import types
 from telebot import types
 import requests
 from bs4 import BeautifulSoup
@@ -22,7 +23,7 @@ aquarius_url = "https://horo.mail.ru/prediction/aquarius/today/"
 pisces_url = "https://horo.mail.ru/prediction/pisces/today/"
 
 
-keyboard = types.InlineKeyboardMarkup()
+keyboard = telebot.types.InlineKeyboardMarkup()
 key_aries = types.InlineKeyboardButton(text='Овен', callback_data='aries_zodiac')
 keyboard.add(key_aries)
 key_taurus = types.InlineKeyboardButton(text='Телец', callback_data='taurus_zodiac')
